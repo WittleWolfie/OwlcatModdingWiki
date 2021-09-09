@@ -6,21 +6,21 @@ The general workflow for modding is to inspect the game code using decompilers s
 
 The game uses a blueprint system to store data about game mechanics. Most mechanics, such as classes, abilities, dialogue, kingdom events, units, items, etc use the blueprint system. Blueprints use a type of entity component system, where the blueprints are containers that hold components which contain data about different features. As blueprints are stored in a proprietary unity file format, the main ways of viewing the data are with the [blueprint dump](https://github.com/spacehamster/KingmakerDataminer/releases/tag/blueprints) or the [data viewer](https://www.nexusmods.com/pathfinderkingmaker/mods/106).
 
-![DnSpy](https://github.com/spacehamster/KingmakerModdingWiki/blob/master/Media/Beginner/DnSpy.png)
+![DnSpy](https://github.com/TylerGoeringer/OwlcatModdingWiki/blob/master/Media/Beginner/DnSpy.png)
 
 
 
 ## Project Creation
 
 * Download and install Microsoft Visual Studio Community with C#
-* Create a new project and select Class Library (.NET Framework)![CreateNewProject](https://github.com/spacehamster/KingmakerModdingWiki/blob/master/Media/Beginner/CreateNewProject.png)
-  * If Class Library (.NET Framework) isn't available, the .NET desktop development workload most likely has not been installed. Select `Get Tools and Features...`  under the tools menu, and then install the  .NET desktop development workload.![InstallDotNet](https://github.com/spacehamster/KingmakerModdingWiki/blob/master/Media/Beginner/InstallDotNet.png)
-* Select .NET Framework 4.6 ![ConfigureNewProject](https://github.com/spacehamster/KingmakerModdingWiki/blob/master/Media/Beginner/ConfigureNewProject.png)
-* Your project should now look like this. ![DefaultProject](https://github.com/spacehamster/KingmakerModdingWiki/blob/master/Media/Beginner/DefaultProject.png)
+* Create a new project and select Class Library (.NET Framework)![CreateNewProject](https://github.com/TylerGoeringer/OwlcatModdingWiki/blob/master/Media/Beginner/CreateNewProject.png)
+  * If Class Library (.NET Framework) isn't available, the .NET desktop development workload most likely has not been installed. Select `Get Tools and Features...`  under the tools menu, and then install the  .NET desktop development workload.![InstallDotNet](https://github.com/TylerGoeringer/OwlcatModdingWiki/blob/master/Media/Beginner/InstallDotNet.png)
+* Select .NET Framework 4.6 ![ConfigureNewProject](https://github.com/TylerGoeringer/OwlcatModdingWiki/blob/master/Media/Beginner/ConfigureNewProject.png)
+* Your project should now look like this. ![DefaultProject](https://github.com/TylerGoeringer/OwlcatModdingWiki/blob/master/Media/Beginner/DefaultProject.png)
 * Rename Class1.cs to Main.cs.
-* Right click the project in the solution explorer, select properties, navigate to the build pane. By default, the project is in the debug configuration. Set the debug output path to `bin\Debug\MyFirstMod\`, then change the active configuration to release and then set the release output path to `bin\Release\MyFirstMod\`. ![ProjectSettings](https://github.com/spacehamster/KingmakerModdingWiki/blob/master/Media/Beginner/ProjectSettings.png)
-* Right click References and select add References. Then select browse, navigate to the game folder and add the displayed references. ![ReferenceManager](https://github.com/spacehamster/KingmakerModdingWiki/blob/master/Media/Beginner/ReferenceManager.png)
-* The project should now look like this. Select all the project references, right click properties, and set Copy Local to False. ![ReferenceCopyLocal](https://github.com/spacehamster/KingmakerModdingWiki/blob/master/Media/Beginner/ReferenceCopyLocal.png)
+* Right click the project in the solution explorer, select properties, navigate to the build pane. By default, the project is in the debug configuration. Set the debug output path to `bin\Debug\MyFirstMod\`, then change the active configuration to release and then set the release output path to `bin\Release\MyFirstMod\`. ![ProjectSettings](https://github.com/TylerGoeringer/OwlcatModdingWiki/blob/master/Media/Beginner/ProjectSettings.png)
+* Right click References and select add References. Then select browse, navigate to the game folder and add the displayed references. ![ReferenceManager](https://github.com/TylerGoeringer/OwlcatModdingWiki/blob/master/Media/Beginner/ReferenceManager.png)
+* The project should now look like this. Select all the project references, right click properties, and set Copy Local to False. ![ReferenceCopyLocal](https://github.com/TylerGoeringer/OwlcatModdingWiki/blob/master/Media/Beginner/ReferenceCopyLocal.png)
 * We now set the contents of Main.cs with our code to initialize the mod after Unity Mod Manager loads it.
 ```csharp
 using UnityEngine;
@@ -49,7 +49,7 @@ namespace MyFirstMod
 }
 ```
 
-* We then create our information file, which lets Unity Mod Manager know how to load and manage our mod. Right click the project, select `Add` and then `New Item` and create a text file named `Info.json`![InfoFile](https://github.com/spacehamster/KingmakerModdingWiki/blob/master/Media/Beginner/InfoFile.png)
+* We then create our information file, which lets Unity Mod Manager know how to load and manage our mod. Right click the project, select `Add` and then `New Item` and create a text file named `Info.json`![InfoFile](https://github.com/TylerGoeringer/OwlcatModdingWiki/blob/master/Media/Beginner/InfoFile.png)
 
 Set the contents to 
 
@@ -65,13 +65,13 @@ Set the contents to
 }
 ```
 
-and then right click the file, select properties, and then enable `Copy if newer` ![ResourcesCopy](https://github.com/spacehamster/KingmakerModdingWiki/blob/master/Media/Beginner/ResourcesCopy.png)
+and then right click the file, select properties, and then enable `Copy if newer` ![ResourcesCopy](https://github.com/TylerGoeringer/OwlcatModdingWiki/blob/master/Media/Beginner/ResourcesCopy.png)
 
 * Build with mod with `ctrl+b` or select `Build MyFirstMod` under the build menu. This will create a .dll file in your project's bin directory. `MyFirstMod\bin\Debug\MyFirstMod.dll` when build in debug configuration and `MyFirstMod\bin\Release\MyFirstMod.dll` when built in release configuration. Copy the files to `C:\Program Files (x86)\Steam\steamapps\common\Pathfinder Kingmaker\Mods\MyFirstMod` to install.
 
 * The mod should now show up in the Unity Mod Manager screen at start up.
 
-  ![IngameScreen](https://github.com/spacehamster/KingmakerModdingWiki/blob/master/Media/Beginner/IngameScreen.png)
+  ![IngameScreen](https://github.com/TylerGoeringer/OwlcatModdingWiki/blob/master/Media/Beginner/IngameScreen.png)
 
 ## GUI and Settings
 
@@ -222,23 +222,23 @@ namespace MyFirstMod
 
 Blueprints are the main way that mechanical data is stored. They are containers that contain data for features such as character classes, races, items, abilities, dialogs, NPCs, AI and many more. As an example of modifying blueprints, we will enable Goblins as a playable race.
 
-The first step is to find out where playable races are stored. One way is to search the json blueprints for references to a race until we find something promising.  ![GroetusBlueprintRoot](https://github.com/spacehamster/KingmakerModdingWiki/blob/master/Media/Beginner/GroetusBlueprintRoot.png)
+The first step is to find out where playable races are stored. One way is to search the json blueprints for references to a race until we find something promising.  ![GroetusBlueprintRoot](https://github.com/TylerGoeringer/OwlcatModdingWiki/blob/master/Media/Beginner/GroetusBlueprintRoot.png)
 
 
 
 As an example of modifying blueprints, we will allow Groetus to be selected as a deity for divine casters other then Harrim. The first step is to find the Groetus blueprint in the json blueprint dump. Any reasonable text editor will do, but we'll use vscode for the example. vscode can search filenames with  `ctrl+p` and file contents with `ctrl+shift+f`. Search Groetus should bring up the file `GroetusFeature.c3e4d5681906d5246ab8b0637b98cbfe.json`.
 
-![GroetusBlueprintSearch](https://github.com/spacehamster/KingmakerModdingWiki/blob/master/Media/Beginner/GroetusBlueprintSearch.png)
+![GroetusBlueprintSearch](https://github.com/TylerGoeringer/OwlcatModdingWiki/blob/master/Media/Beginner/GroetusBlueprintSearch.png)
 
 After inspecting the GroetusFeature blueprint, we can see the reason why Groetus is not selectable by other characters is because the blueprint has a `PrerequisiteFeature` requirement that the character have the `HarrimFeatureGroetus` blueprint. If we search the file contents for `9408d7c7953cbd84b80c7c7451252196` (the `HarrimFeatureGroetus` assetGuid) we can see that it isn't referenced by any other blueprints except for the `Groeutus` blueprint
 
-![GroetusBlueprintFeature](https://github.com/spacehamster/KingmakerModdingWiki/blob/master/Media/Beginner/GroetusBlueprintFeature.png)
+![GroetusBlueprintFeature](https://github.com/TylerGoeringer/OwlcatModdingWiki/blob/master/Media/Beginner/GroetusBlueprintFeature.png)
 
 
 
 We need to modify the GroetusFeature's `Components` list to remove the prerequisite. As GroetusFeature is a kind of BlueprintFeature,  If we take a look at `BlueprintFeature` in DnSpy we can see that it does not contain a field named `Components`. We can click on the parent class `BlueprintFeatureBase`, and after doing that a few times, we finally find out that `Components` is a field of the`BlueprintScriptableObject` class.
 
-![GroetusDnSpy](https://github.com/spacehamster/KingmakerModdingWiki/blob/master/Media/Beginner/GroetusDnSpy.png)
+![GroetusDnSpy](https://github.com/TylerGoeringer/OwlcatModdingWiki/blob/master/Media/Beginner/GroetusDnSpy.png)
 
 Now that we know what we need to do, we can start modifying the blueprints
 

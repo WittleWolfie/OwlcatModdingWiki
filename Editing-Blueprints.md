@@ -1,6 +1,6 @@
 **IMPORTANT FOREWORD:** Once units (and other things) are loaded into an area, most (all?) of their properties and fields are locked in. If you want to test changes to a Unit's blueprint or otherwise, you will need to go through an area load beforehand.
 
-**Helpful Advice:** It is much easier to access protected members of a WoR or Kingmaker class via publicizing the C# assembly - check out the page [here](https://github.com/spacehamster/OwlcatModdingWiki/wiki/Publicise-Assemblies) for more details. If you do not do this, you will need to access many fields via reflection.
+**Helpful Advice:** It is much easier to access protected members of a WoR or Kingmaker class via publicizing the C# assembly - check out the page [here](https://github.com/TylerGoeringer/OwlcatModdingWiki/wiki/Publicise-Assemblies) for more details. If you do not do this, you will need to access many fields via reflection.
 
 # General
 

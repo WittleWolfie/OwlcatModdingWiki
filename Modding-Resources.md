@@ -19,7 +19,7 @@
 # Kingmaker Tools
 * [Kingmaker Blueprint Dump](https://github.com/spacehamster/KingmakerDataminer/releases/tag/blueprints) - Json dump of kingmaker blueprints
 * [KingmakerDataViewer](https://github.com/thehambeard/KingMakerDataViewer/releases/tag/0.9.3a-beta)
-* [Debug mono libraries](https://github.com/spacehamster/dnSpy-Unity-mono/releases/tag/2018.4.10) - Refer [Debugging](https://github.com/spacehamster/OwlcatModdingWiki/wiki/Debugging)
+* [Debug mono libraries](https://github.com/spacehamster/dnSpy-Unity-mono/releases/tag/2018.4.10) - Refer [Debugging](https://github.com/TylerGoeringer/OwlcatModdingWiki/wiki/Debugging)
 * [Mac UMM Install guide](https://github.com/ThyWoof/UMM-MAC-PathFinderKingMaker)
 * [KingmakerHarmony2Template](https://github.com/thehambeard/KingmakerHarmony2Template) - Modding framework that bundles KingmakerModMaker and helpers.cs from COTW/EA
 
